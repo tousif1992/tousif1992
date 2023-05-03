@@ -1,75 +1,4 @@
 /* HEADER */
-.logob{
-    width: 100px;
-    height: 80px;
-    cursor: pointer;
-    }
-    
-    nav{
-     width: 84%;
-     margin: auto;
-     padding: 20px 0;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-    }
-    nav p{
-        position: relative;
-        font-size: 10vh;
-        color: #000;
-        text-transform: uppercase;
-    }
-    
-    nav ul li{
-        display: inline-block;
-        list-style: none;
-        margin: 10px 20px;
-    }
-    
-    nav ul li a{
-        text-decoration: none;
-        color: #606163;
-    }
-    
-    nav ul li a:hover{
-        color: #ff4321;
-    } 
-   
-    .d {
-     display: flex;
-     align-items: center;
-   }
-   
-   
-    .align-center {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-   }
-   
-    @media only screen and (max-width: 768px) {
-     nav {
-       padding: 16px 0;
-     }
-   
-   
-     .icons{
-       display: none;
-     }
-   
-    
-     .logob{
-       width: 100px;
-       height: 80px;
-       cursor: pointer;
-       } 
-     }
-   
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
 body{
     font-family: 'Playfair Display', serif;
     display: grid;
@@ -230,5 +159,77 @@ footer {
     margin-inline-end: auto;
     font-family: 'Lucida Sans Unicode'
 
+}
+
+.logob{
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+    }
+    
+    nav{
+     width: 84%;
+     margin: auto;
+     padding: 20px 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    }
+    nav p{
+        position: relative;
+        font-size: 10vh;
+        color: #000;
+        text-transform: uppercase;
+    }
+    
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color: #606163;
+    }
+    
+    nav ul li a:hover{
+        color: #ff4321;
+    } 
+   
+    .d {
+     display: flex;
+     align-items: center;
+   }
+   
+   
+    .align-center {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   
+    @media only screen and (max-width: 768px) {
+     nav {
+       padding: 16px 0;
+     }
+   
+   
+     .icons{
+       display: none;
+     }
+   
+    
+     .logob{
+       width: 100px;
+       height: 80px;
+       cursor: pointer;
+       } 
+     }
+   
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
