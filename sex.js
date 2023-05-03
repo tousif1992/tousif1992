@@ -12,14 +12,14 @@ const cartData = {};
 
 // Add event listener for add-to-cart button
 addToCartButton.addEventListener('click', () => {
-  const productName = product.querySelector('h2').innerText;
+  const product-Name = product.querySelector('h2').innerText;
   const productPrice = parseFloat(product.querySelector('.price').innerText.replace('$', ''));
 
   // Add item to cart data
-  if (cartData[productName]) {
-    cartData[productName].quantity += 1;
+  if (cartData[product-Name]) {
+    cartData[product-Name].quantity += 1;
   } else {
-    cartData[productName] = {
+    cartData[product-Name] = {
       price: productPrice,
       quantity: 1
     };
@@ -46,7 +46,7 @@ function updateCart()
   cartItems.innerHTML = '';
   cartTotal = 0;
 
-  for (const [productName, productData] of Object.entries(cartData)) {
+  for (const [product-Name, productData] of Object.entries(cartData)) {
     const li = document.createElement('li');
     li.innerText = `${productName} x ${productData.quantity} - $${(productData.price * productData.quantity).toFixed(2)}`;
     cartItems.appendChild(li);
