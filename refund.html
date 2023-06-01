@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>About Us card</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="about.css">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- HEADER -->
+<style>
+    /* HEADER */
+body{
+    font-family: 'Playfair Display', serif;
+    display: grid;
+    background-color: #e4e5ed;
+background-image: linear-gradient(43deg, #e8eaf1 0%, #f0e9ef 46%, #faf8f5 100%);
+width: 100%;
+
+    align-content: center;
+    min-height: 50%;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px
+}
+.image{
+    background-color: #12192c;
+    display: flex;
+    border-radius: 100px 0 0 12px;
+}
+.image img{
+height:50vh;
+margin:50px auto
+}
+.content{
+    background-color: #12192c;
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: center;
+    border-radius: 0  12px 12px 0;
+    color: #fff;
+}
+.content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+}
+.content span{
+    height: 0.5px;
+    width: 80px;
+    background: #777;
+    margin: 30px 0;
+}
+.content p{
+    padding-bottom: 15px;
+    font-weight: 300;
+    opacity: 0.7;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+    color:#ffffff
+}
+.links{
+    margin: 15px 0;
+}
+.links li{
+    border: 2px solid #4158D0;
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 160px;
+    text-align: center;
+}
+.links li a{
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+.links li:hover{
+    border-color: #ede6ec;
+}
+
+.vertical-line{
+    height: 30px;
+    width: 3px;
+    background: #f1edf1;
+    margin: 0 auto;
+}
+.icons{
+    display: flex;
+    padding: 15px 0;
+}
+.icons li{
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+.icons li i{
+    font-size: 26px;
+    opacity: 0.8;
+}
+.icons li i:hover{
+    color: #efe7ef;
+    cursor: pointer;
+}
+
+
+/*****************/
+
+@media(max-width: 100%){
+    section{
+        grid-template-columns: 1fr;
+        width: 100%;
+        border-radius: none;
+    }
+    .image{
+        height: 100vh;
+        border-radius: none;
+    }
+    .content{
+        height: 100vh;
+        border-radius: none;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .links li a{
+        font-size: 14px;
+    }
+    .links{
+        margin: 5px 0;
+    }
+    .links li{
+        padding: 6px 10px;
+    }
+    .icons li i{
+        font-size: 15px;
+    }
+}
+.credit{
+    text-align: center;
+    color: #000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .credit a{
+    text-decoration: none;
+    color:#000;
+    font-weight: bold;
+  } 
+
+footer {
+    text-align: center;
+    color: #000;
+    margin-inline-end: auto;
+    font-family: 'Lucida Sans Unicode'
+
+}
+
+
+.logob{
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+    }
+    
+    nav{
+     width: 100%;
+     margin: auto;
+     padding: 20px 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    }
+    nav p{
+        position: relative;
+        font-size: 10vh;
+        color: #000;
+        text-transform: uppercase;
+    }
+    
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color: #606163;
+    }
+    
+    nav ul li a:hover{
+        color: #ff4321;
+    } 
+   
+    .d {
+     display: flex;
+     align-items: center;
+   }
+   
+   
+    .align-center {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   
+    @media only screen and (max-width: 768px) {
+     nav {
+       padding: 16px 0;
+     }
+   
+   
+     .icons{
+       display: none;
+     }
+   
+    
+     .logob{
+       width: 100px;
+       height: 80px;
+       cursor: pointer;
+       } 
+     }
+   
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+</style>
+ <header class="header">
+    <nav>
+      <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\ZARAa.JPG"  class="logob">
+      <p>ZARA STORE</p>
+      <ul>
+          <Hi><a href="zaraa.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="sex.html">ALL PRODUCTS</a></li>
+  
+      </ul>
+      </nav>
+        
+    </header>
+  
+       
+           <br>
+           <br>
+           <br><p><center><b>Refund Policy</b></center> </p><br>
+           <br><p><center><b>Returns</b></center> </p><br>
+
+          
+           
+           Our policy lasts 3 days. If 3 days have gone by since your purchase, unfortunately we can’t
+           offer you a refund or exchange.
+           <br>To be eligible for a return, your item must be unused and in the same condition that you
+           received it. It must also be in the original packaging.
+           Several types of goods are exempt from being returned. Perishable goods such as food,
+           flowers, newspapers or magazines cannot be returned. We also do not accept products that are
+           intimate or sanitary goods, hazardous materials, or flammable liquids or gases.
+           <br> Additional non-returnable items:
+           <br> ● Gift cards
+           <br>● Downloadable software products
+           <br>● Some health and personal care items
+           <br>To complete your return, we require a receipt or proof of purchase.
+           <br>Please do not send your purchase back to the manufacturer.
+           <br>There are certain situations where only partial refunds are granted: (if applicable)
+           Book with obvious signs of use
+           <br>CD, DVD, VHS tape, software, video game, cassette tape, or vinyl record that has been
+           opened.
+           <br>Any item not in its original condition, is damaged or missing parts for reasons not due to our
+           error.
+           <br>Any item that is returned more than 30 days after delivery
+           Refunds (if applicable)
+           <br>Once your return is received and inspected, we will send you an email to notify you that we
+           have received your returned item. We will also notify you of the approval or rejection of your
+           refund.
+           <br>If you are approved, then your refund will be processed, and a credit will automatically be
+           applied to your credit card or original method of payment, within a certain amount of days.
+           Late or missing refunds (if applicable)
+           <br>If you haven’t received a refund yet, first check your bank account again.
+           Then contact your credit card company, it may take some time before your refund is officially
+           posted.
+           <br>Next contact your bank. There is often some processing time before a refund is posted.
+           
+           <br>If you’ve done all of this and you still have not received your refund yet, please contact us at
+           [zaraenterprises12@gmail.com].
+           <br>Sale items (if applicable)
+           Only regular priced items may be refunded, unfortunately sale items cannot be refunded.
+           <br>Exchanges (if applicable)
+           <br> We only replace items if they are defective or damaged. If you need to exchange it for the same
+           item, send us an email at zaraenterprises12@Gmail.com] and send your item to: 55/5 opp thimmenahalli
+           Bus stop bellahalli main road near haj bhavan bangalore 560065
+           <br>Gifts
+           If the item was marked as a gift when purchased and shipped directly to you, you’ll receive a gift
+           credit for the value of your return. Once the returned item is received, a gift certificate will be
+           mailed to you.
+           If the item wasn’t marked as a gift when purchased, or the gift giver had the order shipped to
+           themselves to give to you later, we will send a refund to the gift giver and he will find out about
+           your return.
+           <br>Shipping
+           <br>To return your product, you should mail your product to:  55/5 opp thimmenahalli
+           Bus stop bellahalli main road near haj bhavan bangalore 560065.
+           You will be responsible for paying for your own shipping costs for returning your item. Shipping
+           costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted
+           from your refund.
+           <br>Depending on where you live, the time it may take for your exchanged product to reach you,
+           may vary.
+           <br>If you are shipping an item , you should consider using a trackable shipping service or
+           purchasing shipping insurance. We don’t guarantee that we will receive your returned item.
+<br>SECTION 20 - CONTACT INFORMATION
+
+Questions about the refund policy should be sent to us at Company <br><br>
+<center><b>Contact number :8971067829</b></center>
+<br><center><b>Email : zaraenterprises12@Gmail.com.</b></center><br>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
