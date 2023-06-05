@@ -3,7 +3,700 @@
     <head>
         <title>ZARA STORE</title>
         <link rel="stylesheet" type="text/css" href="home.css">
-        
+        <style>
+            * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background-color: #7b7b7d;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+p {
+  color: #090707;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ 
+}
+
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.col-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+
+
+.slidershow {
+  width: 1250px;
+  height: 600px;
+  overflow: hidden;
+}
+.middle {
+  position: absolute;
+  top: 20%;
+  left: 0.5%;
+  transform: translate(-50% -50%);
+}
+@keyframes slide_animation{
+  0% {right:0px;}
+  10% {right:0px;}
+  20% {right:1250px;}
+  30% {right:1250px;}
+  40% {right: 2500px;}
+  50% {right: 2500px;}
+  60% {right: 3750px;}
+  70% {right: 3750px;}
+  80% {right: 5000px;}
+  90% {right: 5000px;}
+  100% {right:0px;}
+}
+
+@-webkit-keyframes slide_animation{
+  0% {right:0px;}
+  10% {right:0px;}
+  20% {right:1250px;}
+  30% {right:1250px;}
+  40% {right: 2500px;}
+  50% {right: 2500px;}
+  60% {right: 3750px;}
+  70% {right: 3750px;}
+  80% {right: 5000px;}
+  90% {right: 5000px;}
+  100% {right:0px;}
+}
+
+.slide img {
+  width: 3600px;
+  height: 800px;
+  margin: -1250px -2500px -3750px -5000px -6250;
+  position: relative;
+  -webkit-animation-name: slide_animation;
+  animation-name: slide_animation;
+  -webkit-animation-duration: 33s;
+  animation-duration: 33s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar {
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.bar:hover {
+  background: #fff;
+}
+input[name="r"]{
+  position: absolute;
+  visibility: hidden;
+}
+ 
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+.slide {
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+
+}
+
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+
+.header {
+  background: radial-gradient(#efebeb, #f4eded);
+}
+
+.header .row {
+  margin-top: 70px;
+}
+
+.categories {
+  margin: 70px 0;
+}
+
+.col-3 {
+  flex-basis: 30%;
+  min-width: 250px;
+  margin-bottom: 450px;
+}
+
+.col-3 img {
+  width: 100%;
+}
+
+.small-container {
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.col-4 {
+  flex-basis: 25%;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+  transition: transform 0.5s;
+}
+
+.col-4 img {
+  width: 100%;
+}
+
+
+.title {
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: #ff0a0a;
+}
+.title::after {
+  content: "";
+  background: #ff523b;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+h4 {
+  color: #880606;
+  font-weight: 100PX;
+}
+
+.col-4 p {
+  font-size: 14px;
+}
+
+.rating .fas {
+  color: #ff523b;
+}
+
+.rating .far {
+  color: #ff523b;
+}
+
+.col-4:hover {
+  transform: translateY(-5px);
+}
+
+/* Offer */
+
+.offer {
+  background: radial-gradient(#fff, #050404);
+  margin-top: 80px;
+  padding: 30px 0;
+}
+
+.col-2 .offer-img {
+  padding: 50px;
+}
+
+small {
+  color: #020101;
+}
+
+/* testimonial */
+
+.testimonial {
+  height: 770px;
+  padding-top: 100px;
+  background-color: #2b2424;
+  }
+
+.testimonial .col-3 {
+  text-align: center;
+  padding: 80px 20px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.5s;
+  background-color: #0b6a01;
+}
+
+.testimonial .col-3 img {
+  width: 100px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+.testimonial .col-3:hover {
+  transform: translateY(-10px);
+}
+
+.fa-quote-left {
+  font-size: 34px;
+  color: #ff523b;
+}
+
+.cols-3 p {
+  font-size: 14px;
+  margin: 12px 0;
+  color: #050505;
+}
+
+.testimonial .cols-3 h3 {
+  font-weight: 600;
+  color: #050404;
+  font-size: 20px;
+}
+
+
+/* footer */
+
+.footer {
+  width: 100%;
+  background: #000;
+  color: #070707;
+  font-size: 14px;
+  height: 20%;
+}
+
+.footer p {
+  color: #f8f7f7;
+}
+
+.footer h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-col-1 {
+  flex-basis: 30%;
+}
+
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-col-2 img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.footer-col-3,
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.app-logo {
+  margin-top: 20px;
+}
+.app-logo img {
+  width: 140px;
+}
+
+.footer hr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.menu-icon {
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
+
+/* media query for menu */
+
+@media only screen and (max-width: 800px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    color: #fff;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* all products page */
+
+.row-2 {
+  justify-content: space-between;
+  margin: 100px auto 50px;
+}
+
+select {
+  border: 1px solid #ff523b;
+  padding: 5px;
+}
+
+select:focus {
+  outline: none;
+}
+
+.page-btn {
+  margin: 0 auto 80px;
+}
+
+.page-btn span {
+  display: inline-block;
+  border: 1px solid #ff523b;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.page-btn span:hover {
+  background: #ff523b;
+  color: #ffffff;
+}
+
+/* single product details */
+
+.single-product {
+  margin-top: 80px;
+}
+
+.single-product .col-2 img {
+  padding: 0;
+}
+
+.single-product .col-2 {
+  padding: 20px;
+}
+
+.single-product h4 {
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.single-product select {
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.single-product input {
+  width: 50px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  border: 1px solid #ff523b;
+}
+
+input:focus {
+  outline: none;
+}
+
+.single-product .fas {
+  color: #ff523b;
+  margin-left: 10px;
+}
+
+.small-img-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+/* cart items */
+
+.cart-page {
+  margin: 90px auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  color: #ffffff;
+  background: #ff523b;
+  font-weight: normal;
+}
+td {
+  padding: 10px 5px;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a {
+  color: #ff523b;
+  font-size: 12px;
+}
+
+td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid #ff523b;
+  width: 100%;
+  max-width: 400px;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+th:last-child {
+  text-align: right;
+}
+/* account page */
+.account-page {
+  padding: 50px 0;
+  background: radial-gradient(#fff, #ffd6d6);
+}
+
+.form-container {
+  background: #ffffff;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.form-container span {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #555555;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+}
+
+.form-btn {
+  display: inline-block;
+}
+
+.form-container form {
+  max-width: 300px;
+  padding: 0 20px;
+  position: absolute;
+  top: 130px;
+  transition: transform 1s;
+}
+
+form input {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+}
+
+form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+form .btn:focus {
+  outline: none;
+}
+
+#LoginForm {
+  left: -300px;
+}
+
+#RegForm {
+  left: 0;
+}
+
+form a {
+  font-size: 12px;
+}
+
+#Indicator {
+  width: 100px;
+  border: none;
+  background: #ff523b;
+  height: 3px;
+  margin-top: 8px;
+  transform: translateX(100px);
+  transition: transform 1s;
+}
+
+/* media query for less than 600 screen size */
+
+@media only screen and (max-width: 600px) {
+  .row {
+    text-align: center;
+  }
+  .col-2,
+  .col-3,
+  .col-4 {
+    flex-basis: 100%;
+  }
+
+  .single-product .row {
+    text-align: left;
+  }
+
+  .single-product .col-2 {
+    padding: 20px 0;
+  }
+  .single-product h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .cart-info p {
+    display: none;
+  }
+}
+
+            <style>
         <meta lang="en">
         <meta name="best place for interior">
     
@@ -15,14 +708,14 @@
         <div class="container">
           <div class="navbar">
             <div class="logo">
-              <a href="index.html"><img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\ZARA.JPG" alt="Zara Store" width="125px" /></a>
+              <a href="index.html"><img src="ZARA.JPG" alt="Zara Store" width="125px" /></a>
             </div>
             <nav>
               <ul id="MenuItems">
                 <Hi><a href="home.html">HOME</a></li>&nbsp;&nbsp;
                     <li><a href="contact.html">CONTACT US</a></li>
-                    <li><a href="C:\Users\ezara\OneDrive\Desktop\home\produt.html">ALL PRODUCTS</a></li>
-                      <li><a href="about.html">ABOUT US</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="produt.html">ALL PRODUCTS</a></li>
+                      <li><a href="about.html">ABOUT US</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      
                 </ul>
             </nav>
@@ -44,19 +737,19 @@
               <input type="radio" name="r" id="r4">
               <input type="radio" name="r" id="r5">
               <div class="slide s1">
-                  <img src="C:\Users\ezara\OneDrive\Desktop\ghfgjgfjhghgfjg_files\zara 1.jpg" alt="">
+                  <img src="zara 1.jpg" alt="">
               </div>
               <div class="slide">
-                  <img src="C:\Users\ezara\OneDrive\Desktop\ghfgjgfjhghgfjg_files\zara2.jpg" alt="">
+                  <img src="zara2.jpg" alt="">
               </div>
               <div class="slide">
-                  <img src="C:\Users\ezara\OneDrive\Desktop\ghfgjgfjhghgfjg_files\zara6.jpg" alt="">
+                  <img src="C:zara6.jpg" alt="">
               </div>
               <div class="slide">
-                  <img src="C:\Users\ezara\OneDrive\Desktop\ghfgjgfjhghgfjg_files\zara5.jpg" alt="">
+                  <img src="zara5.jpg" alt="">
               </div>
               <div class="slide">
-                  <img src="C:\Users\ezara\OneDrive\Desktop\ghfgjgfjhghgfjg_files\zara4.jpg" alt="">
+                  <img src="zara4.jpg" alt="">
               </div>
               <div class="navigation">
                   <label for="r1" class="bar"></label>
@@ -75,13 +768,13 @@
         <div class="small-container">
           <div class="row">
             <div class="col-3">
-              <img src="C:\Users\ezara\OneDrive\Desktop\ZARA2.Jpg" alt="" />
+              <img src="ZARA2.Jpg" alt="" />
             </div>
             <div class="col-3">
-              <img src="C:\Users\ezara\OneDrive\Desktop\ZARA3.jpeg" alt="" />
+              <img src="ZARA3.jpeg" alt="" />
             </div>
             <div class="col-3">
-              <img src="C:\Users\ezara\OneDrive\Desktop\ZARA5.jpg" alt="" />
+              <img src="ZARA5.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -92,26 +785,26 @@
         <h2 class="title">Featured Products</h2>
         <div class="row">
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\VILLA.webp" alt="" /></a>
+            <img src="VILLA.webp" alt="" /></a>
             <a href="https://br.pinterest.com/search/pins/?q=villa&rs=typed">
               <h4><BR><BR><CENTER>CLICK HERE FOR HOME DESIGNS</CENTER></h4>
             </a>
           </div>
       
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\GI.jpg" alt="" />
+            <img src="GI.jpg" alt="" />
             <a href="https://br.pinterest.com/search/pins/?q=villa&rs=typed">
             <h4><BR>GI CHANNEL MANUFACTURE</h4>
           </div>
       
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\ceiling 2.png" alt="" />
+            <img src="ceiling 2.png" alt="" />
             <a href="https://www.pinterest.com/search/pins/?rs=ac&len=2&q=interior%20design&eq=inter&etslf=3685">
             <h4><BR><CENTER>CLICK HERE INTERIOR DESIGN</CENTER> </h4>
           </div>
       
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\ceiling.png" alt="" />
+            <img src="ceiling.png" alt="" />
             <a href="https://in.pinterest.com/search/pins/?q=ceiling&rs=typed">
             <h4><BR><BR><CENTER>CLICK HERE FOR CEILING DESIGNS</CENTER></h4>
             
@@ -123,48 +816,48 @@
         <h2 class="title">ONLINE SERVICES</h2>
         <div class="row">
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\flight.jpg" alt="" />
+            <img src="flight.jpg" alt="" />
             <a href="https://www.makemytrip.com/">
             <h4><br><br><br><br><center>FLIGHT TICKET BOOKING </center></h4>
             
           </div>
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\train.jpg" alt="" />
+            <img src="train.jpg" alt="" />
             <a href="https://www.irctc.co.in/nget/train-search">
             <h4><br><br><br><br><center>TRAIN TICKET BOOKING</center></h4>
           </div>
       
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\bus.jpg" alt="" />
+            <img src="bus.jpg" alt="" />
             <a href="https://www.redbus.in/">
             <h4><br><br><br><br><center>BUS TICKET BOOKING</center></h4>
           </div>
       
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\hotel.jpg" alt="" />
+            <img src="hotel.jpg" alt="" />
             <a href="https://www.booking.com/index.html?aid=378266;label=bdot-Os1*aFx2GVFdW3rxGd0MYQS541115605091:pl:ta:p1:p22,563,000:ac:ap:neg:fi:tikwd-334108349:lp1007768:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YYriJK-Ikd_dLBPOo0BdMww;ws=&gclid=CjwKCAjwgqejBhBAEiwAuWHioHoKcnEGUB2SJYniVoT6vgFD95YDf0wJBICPvCOR6MqQc-kAMAeuPhoCKFYQAvD_BwE">
             <h4><br><br><br><br><center>HOTEL BOOKING</center></h4>
           </div>
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\download.png" alt="" />
+            <img src="download.png" alt="" />
             <a href="https://www.passportindia.gov.in/AppOnlineProject/welcomeLink#">
             <h4><br><br><br><br><center>PASSPORT APPLY</center></h4>
             
           </div>
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\votercard.jpg" alt="" />
+            <img src="votercard.jpg" alt="" />
             <a href="https://www.nvsp.in/">
             <h4><br><br><br><br><center>VOTER ID APPLY</center></h4>
           </div>
       
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\voter.jpg" alt="" />
+            <img src="voter.jpg" alt="" />
             <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html">
             <h4><br><br><br><br><center>PAN CARD APPLY</center></h4>
           </div>
       
           <div class="col-4">
-            <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\driving.jpg" alt="" />
+            <img src="driving.jpg" alt="" />
             <a href="https://sarathi.parivahan.gov.in/sarathiservice/stateSelectBean.do">
             <h4><br><br><br><br><center>DRIVING LICENCE</center></h4>
           </div>
@@ -181,7 +874,7 @@
         <div class="small-container">
           <div class="row">
             <div class="col-2">
-              <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\IMAGES 3.jpg" alt="" class="offer-img" />
+              <img src="IMAGES 3.jpg" alt="" class="offer-img" />
             </div>
             <div class="col-2">
               <p>Exclusively Available on Zara Store</p>
@@ -204,7 +897,7 @@
                 We are committed to delivering an excellent standard of service to all potential and existing customer. 24/7 service provided.
               </p>
              
-              <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\tousif.jpg" alt="" />
+              <img src="tousif.jpg" alt="" />
               <h3>Mr Tousif Ahmed.</h3>
             </div>
       
@@ -217,7 +910,7 @@
                  and we provide best land for your dream home.
               </p>
               
-              <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\dad.jpg" alt="" />
+              <img src="dad.jpg" alt="" />
               <h3>Mr Siraj Ahmed.</h3>
             </div>
       
@@ -228,7 +921,7 @@
                 This allows us to control the quality and also give you a 10 year warranty on all products.
                 </p>
               
-              <img src="C:\Users\ezara\OneDrive\Desktop\ALL PRODUCTS\tabrez.jpg" alt="" />
+              <img src="tabrez.jpg" alt="" />
               <h3>Mr Tabrez Ahmed</h3>
             </div>
           </div>
