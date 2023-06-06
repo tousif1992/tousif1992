@@ -77,7 +77,7 @@ body {
 .cart-wrapper{
     overflow-y: auto;
     max-height: 350px;
-    width:35vw;
+    width:28vw;
 
 }
 .cart-box {
@@ -177,6 +177,10 @@ body {
 	text-align: center;
 	margin-bottom: 1.5rem;
 }
+input{width:100%;padding:2px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}
+input:focus{border-bottom:2px solid #78788c}
+p:before{content:attr(type);display:block;margin:5px 0 0;font-size:14px;color:#5a5a5a}
+
 .shop{
 	margin-top: 2rem;
 }
@@ -297,7 +301,11 @@ body {
                             <div class="total-price"> 0</div>
 
                         </div>
-                       
+	</div>
+                       <div>
+						<p type="Name:"><input placeholder="Write your name here.."></input></p>
+						<p type="Email:"><input placeholder="Let us know how to contact you back.."></input></p>
+						<p type="Mobile Number:"><input placeholder="What would you like to tell us.."></input></p>
 						<a href="checkout.html" class="btn-checkout">CHECKOUT</a>
                     
                     <!-- cart close -->
