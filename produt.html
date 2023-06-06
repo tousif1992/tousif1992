@@ -177,9 +177,9 @@ body {
 	text-align: center;
 	margin-bottom: 1.5rem;
 }
-input{width:100%;padding:2px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}
-input:focus{border-bottom:2px solid #78788c}
-p:before{content:attr(type);display:block;margin:5px 0 0;font-size:14px;color:#5a5a5a}
+.input{width:100%;padding:2px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2}
+.input:focus{border-bottom:2px solid #78788c}
+.p:before{content:attr(type);display:block;margin:5px 0 0;font-size:14px;color:#5a5a5a}
 
 .shop{
 	margin-top: 2rem;
@@ -303,7 +303,10 @@ p:before{content:attr(type);display:block;margin:5px 0 0;font-size:14px;color:#5
                         </div>
 	</div>
           <!-- Buy now -->
-	  <a href="checkout.html" class="btn-checkout">CHECKOUT</a>
+	  <p type="Name:"><input placeholder="Write your name here.."></input></p>
+						<p type="Email:"><input placeholder="Let us know how to contact you back.."></input></p>
+						<p type="Mobile Number:"><input placeholder="What would you like to tell us.."></input></p>
+                        <button type="button" class="btn-buy">Buy Now</button></A>
                     <!-- cart close -->
                     <i class="fas fa-window-close" id="close-cart" ></i>
 				</div>
